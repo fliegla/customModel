@@ -1,1 +1,1 @@
-from gym_mujoco_diffdrive.envs.diffdrive import DiffDriveEnv
+from gym_basic.envs.diffdrive import DiffDriveEnv
