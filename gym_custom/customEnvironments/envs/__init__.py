@@ -1,1 +1,1 @@
-from gym_basic.envs.diffdrive import DiffDriveEnv
+from customEnvironments.envs.diffdrive import DiffDriveEnv
