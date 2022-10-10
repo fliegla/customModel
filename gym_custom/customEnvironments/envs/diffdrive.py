@@ -78,8 +78,8 @@ class DiffDriveEnv(MujocoEnv, utils.EzPickle):
     metadata = {
         "render_modes": [
             "human",
-            "rgb_array",
-            "depth_array",
+            "single_rgb_array",
+            "single_depth_array",
         ],
         "render_fps": 67,
     }
