@@ -75,10 +75,19 @@ class DiffDriveEnv(MujocoEnv, utils.EzPickle):
         "render_fps": 30,
     }
     """
+    metadata = {
+        "render_modes": [
+            "human",
+            "rgb_array",
+            "depth_array",
+        ],
+        "render_fps": 67,
+    }
+    
     def __init__(self, **kwargs):
         utils.EzPickle.__init__(self, **kwargs)
         observation_space = Box(low=-np.inf, high=np.inf, shape=(10,), dtype=np.float64)
-        MujocoEnv.__init__(self, "/content/customModel/gym_custom/customEnvironments/envs/diffdrive.xml", 4, observation_space=observation_space, **kwargs)
+        MujocoEnv.__init__(self, "/content/customModel/gym_custom/customEnvironments/envs/diffdrive.xml", 5, observation_space=observation_space, **kwargs)
 
     def step(self, action):
         vec = self.get_body_com("fingertip") - self.get_body_com("target")
