@@ -7,7 +7,7 @@ from gym.spaces import Box
 
 import numpy as np
 
-DEFAULT_CAMERA_CONFIG = {}
+"""DEFAULT_CAMERA_CONFIG = {}"""
 
 class DiffDriveEnv(MujocoEnv, utils.EzPickle):
     """
@@ -65,7 +65,7 @@ class DiffDriveEnv(MujocoEnv, utils.EzPickle):
     ### Arguments
     No additional arguments
     """
-    
+    """
     metadata = {
         "render_modes": [
             "human",
@@ -74,7 +74,7 @@ class DiffDriveEnv(MujocoEnv, utils.EzPickle):
         ],
         "render_fps": 30,
     }
-    
+    """
     def __init__(self, **kwargs):
         utils.EzPickle.__init__(self, **kwargs)
         observation_space = Box(low=-np.inf, high=np.inf, shape=(10,), dtype=np.float64)
