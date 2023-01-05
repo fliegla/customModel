@@ -3,6 +3,11 @@
   <worldbody>
     <light diffuse=".5 .5 .5" pos="0 0 300" dir="0 0 -1"/>
     <geom type="plane" size="25 5 0.1" rgba=".9 .9 .9 1"/>
+    <!--walls-->
+    <geom name="wall_1" type="box" size="25 .5 .5" pos="0 4.5 0" rgba=".2 .2 .2 1"/>
+    <geom name="wall_2" type="box" size="25 .5 .5" pos="0 -4.5 0" rgba=".2 .2 .2 1"/>
+    <geom name="wall_3" type="box" size=".5 5 .5" pos="25.5 0 0" rgba=".2 .2 .2 1"/>
+    <geom name="wall_4" type="box" size=".5 5 .5" pos="-25.5 0 0" rgba=".2 .2 .2 1"/>
     <!--differential drive robot-->
     <body name="chassis" pos="-24 0 .2" euler="0 90 0">
       <joint type="free" name="chassis"/>
@@ -20,13 +25,6 @@
     <!--goal line/box-->
     <body>
       <geom name="goal" type="box" size=".5 .5 .5" pos="24.5 0 .3" rgba=".9 0 0 1"/>
-    </body>
-    <!--walls-->
-    <body>
-      <geom name="wall_1" type="box" size="25 .5 .5" pos="0 4.5 0" rgba=".2 .2 .2 1"/>
-      <geom name="wall_2" type="box" size="25 .5 .5" pos="0 -4.5 0" rgba=".2 .2 .2 1"/>
-      <geom name="wall_3" type="box" size=".5 5 .5" pos="25.5 0 0" rgba=".2 .2 .2 1"/>
-      <geom name="wall_4" type="box" size=".5 5 .5" pos="-25.5 0 0" rgba=".2 .2 .2 1"/>
     </body>
   </worldbody>
   <actuator>
