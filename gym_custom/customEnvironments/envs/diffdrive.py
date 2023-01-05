@@ -50,9 +50,9 @@ class DiffDriveEnv(MujocoEnv, utils.EzPickle):
     def _get_obs(self):
         return np.concatenate(
             [
-                self.data.qpos.flat[:2],
-                self.data.qpos.flat[8:10],
-                self.data.qvel.flat[:2],
-                self.get_body_com("chassis") - self.get_body_com("goal"),
+                self.data.qpos.flat[6:8],
+                self.data.qvel.flat[6:8],
+                self.get_body_com("chassis"),
+                self.get_body_com("goal"),
             ]
         )
